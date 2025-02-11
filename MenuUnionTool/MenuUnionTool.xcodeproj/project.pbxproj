@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8517AED82D5B236C009BE4AB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8517AED72D5B236C009BE4AB /* Supabase */; };
+		853588992D5B1EF400A97B7E /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 853588982D5B1EF400A97B7E /* Auth */; };
+		8535889B2D5B1EF400A97B7E /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 8535889A2D5B1EF400A97B7E /* Functions */; };
+		8535889D2D5B1EF400A97B7E /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 8535889C2D5B1EF400A97B7E /* PostgREST */; };
+		8535889F2D5B1EF400A97B7E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 8535889E2D5B1EF400A97B7E /* Realtime */; };
+		853588A12D5B1EF400A97B7E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 853588A02D5B1EF400A97B7E /* Storage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		851F43892D35533A00AC6C01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +38,22 @@
 		851F43922D35533B00AC6C01 /* MenuUnionToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuUnionToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		853588962D5B1B1200A97B7E /* Exceptions for "MenuUnionTool" folder in "MenuUnionTool" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 851F43772D35533A00AC6C01 /* MenuUnionTool */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		851F437A2D35533A00AC6C01 /* MenuUnionTool */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				853588962D5B1B1200A97B7E /* Exceptions for "MenuUnionTool" folder in "MenuUnionTool" target */,
+			);
 			path = MenuUnionTool;
 			sourceTree = "<group>";
 		};
@@ -52,6 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8535889D2D5B1EF400A97B7E /* PostgREST in Frameworks */,
+				8535889B2D5B1EF400A97B7E /* Functions in Frameworks */,
+				8517AED82D5B236C009BE4AB /* Supabase in Frameworks */,
+				853588992D5B1EF400A97B7E /* Auth in Frameworks */,
+				853588A12D5B1EF400A97B7E /* Storage in Frameworks */,
+				8535889F2D5B1EF400A97B7E /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +100,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8517AED62D5B236C009BE4AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		851F436F2D35533A00AC6C01 = {
 			isa = PBXGroup;
 			children = (
 				851F437A2D35533A00AC6C01 /* MenuUnionTool */,
 				851F438B2D35533A00AC6C01 /* MenuUnionToolTests */,
 				851F43952D35533B00AC6C01 /* MenuUnionToolUITests */,
+				8517AED62D5B236C009BE4AB /* Frameworks */,
 				851F43792D35533A00AC6C01 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +148,12 @@
 			);
 			name = MenuUnionTool;
 			packageProductDependencies = (
+				853588982D5B1EF400A97B7E /* Auth */,
+				8535889A2D5B1EF400A97B7E /* Functions */,
+				8535889C2D5B1EF400A97B7E /* PostgREST */,
+				8535889E2D5B1EF400A97B7E /* Realtime */,
+				853588A02D5B1EF400A97B7E /* Storage */,
+				8517AED72D5B236C009BE4AB /* Supabase */,
 			);
 			productName = MenuUnionTool;
 			productReference = 851F43782D35533A00AC6C01 /* MenuUnionTool.app */;
@@ -195,6 +237,9 @@
 			);
 			mainGroup = 851F436F2D35533A00AC6C01;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 851F43792D35533A00AC6C01 /* Products */;
 			projectDirPath = "";
@@ -390,6 +435,8 @@
 		};
 		851F439D2D35533B00AC6C01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 851F437A2D35533A00AC6C01 /* MenuUnionTool */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,6 +446,7 @@
 				DEVELOPMENT_TEAM = N2W2R4QBEZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MenuUnionTool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +476,7 @@
 				DEVELOPMENT_TEAM = N2W2R4QBEZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MenuUnionTool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -528,7 +577,7 @@
 				851F439B2D35533B00AC6C01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		851F439C2D35533B00AC6C01 /* Build configuration list for PBXNativeTarget "MenuUnionTool" */ = {
 			isa = XCConfigurationList;
@@ -537,7 +586,7 @@
 				851F439E2D35533B00AC6C01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		851F439F2D35533B00AC6C01 /* Build configuration list for PBXNativeTarget "MenuUnionToolTests" */ = {
 			isa = XCConfigurationList;
@@ -546,7 +595,7 @@
 				851F43A12D35533B00AC6C01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		851F43A22D35533B00AC6C01 /* Build configuration list for PBXNativeTarget "MenuUnionToolUITests" */ = {
 			isa = XCConfigurationList;
@@ -555,9 +604,53 @@
 				851F43A42D35533B00AC6C01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8517AED72D5B236C009BE4AB /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		853588982D5B1EF400A97B7E /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		8535889A2D5B1EF400A97B7E /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		8535889C2D5B1EF400A97B7E /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		8535889E2D5B1EF400A97B7E /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		853588A02D5B1EF400A97B7E /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 853588972D5B1EF400A97B7E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 851F43702D35533A00AC6C01 /* Project object */;
 }

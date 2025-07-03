@@ -18,7 +18,8 @@ struct ContentView: View {
                 // タブセレクター
                 Picker("表示モード", selection: $selectedTab) {
                     Text("献立").tag(0)
-                    Text("買い物リスト").tag(1)
+                    Text("献立選択").tag(1)
+                    Text("買い物リスト").tag(2)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
@@ -26,13 +27,15 @@ struct ContentView: View {
                 // タブに応じてコンテンツを切り替え
                 if selectedTab == 0 {
                     WeeklyMenuView(weeklyMenu: weeklyMenu)
+                } else if selectedTab == 1 {
+                    MenuSelectionView(weeklyMenu: $weeklyMenu)
                 } else {
                     ShoppingListView(shoppingList: $shoppingList)
                 }
                 
                 Spacer()
             }
-            .navigationTitle("MenuUnion")
+//            .navigationTitle("MenuUnion")
         }
         .task {
             await loadWeeklyMenu()

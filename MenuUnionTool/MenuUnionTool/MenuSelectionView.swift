@@ -38,6 +38,12 @@ struct MenuSelectionView: View {
             .navigationTitle("献立選択")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: MenuRegistrationView()) {
+                        Image(systemName: "plus")
+                    }
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("保存") {
                         saveMenu()
@@ -254,6 +260,20 @@ struct MealPickerView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
+                
+                // 新しいメニューを追加するボタン
+                Button(action: {
+                    // TODO: 新しいメニュー追加画面を開く
+                }) {
+                    HStack {
+                        Image(systemName: "plus.circle")
+                            .foregroundColor(.blue)
+                        Text("新しいメニューを追加")
+                            .foregroundColor(.blue)
+                        Spacer()
+                    }
+                }
+                .buttonStyle(PlainButtonStyle())
             }
             .navigationTitle("\(title)を選択")
             .navigationBarTitleDisplayMode(.inline)

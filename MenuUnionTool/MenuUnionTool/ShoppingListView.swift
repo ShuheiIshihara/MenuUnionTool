@@ -80,9 +80,9 @@ struct ShoppingListRow: View {
 
 #Preview {
     let sampleIngredients = [
-        Ingredient(id: 1, name: "米", unit: "合", created_at: ""),
-        Ingredient(id: 2, name: "卵", unit: "個", created_at: ""),
-        Ingredient(id: 3, name: "牛乳", unit: "ml", created_at: "")
+        AppIngredient(id: 1, name: "米", unit: "合", created_at: ""),
+        AppIngredient(id: 2, name: "卵", unit: "個", created_at: ""),
+        AppIngredient(id: 3, name: "牛乳", unit: "ml", created_at: "")
     ]
     
     let sampleShoppingList = sampleIngredients.map { ingredient in

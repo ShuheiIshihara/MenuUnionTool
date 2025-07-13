@@ -73,11 +73,11 @@ struct ContentView: View {
     private func generateShoppingList() {
         // サンプル食材リストを生成
         let sampleIngredients = [
-            Ingredient(id: 1, name: "米", unit: "合", created_at: ""),
-            Ingredient(id: 2, name: "卵", unit: "個", created_at: ""),
-            Ingredient(id: 3, name: "牛乳", unit: "ml", created_at: ""),
-            Ingredient(id: 4, name: "玉ねぎ", unit: "個", created_at: ""),
-            Ingredient(id: 5, name: "にんじん", unit: "本", created_at: "")
+            AppIngredient(id: 1, name: "米", unit: "合", created_at: ""),
+            AppIngredient(id: 2, name: "卵", unit: "個", created_at: ""),
+            AppIngredient(id: 3, name: "牛乳", unit: "ml", created_at: ""),
+            AppIngredient(id: 4, name: "玉ねぎ", unit: "個", created_at: ""),
+            AppIngredient(id: 5, name: "にんじん", unit: "本", created_at: "")
         ]
         
         shoppingList = sampleIngredients.map { ingredient in

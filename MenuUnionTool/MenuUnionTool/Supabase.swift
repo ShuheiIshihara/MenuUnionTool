@@ -28,7 +28,7 @@ struct Meal: Decodable, Identifiable {
 }
 
 // 食材のデータモデル
-struct Ingredient: Decodable, Identifiable {
+struct AppIngredient: Decodable, Identifiable {
     let id: Int
     let name: String
     let unit: String
@@ -63,7 +63,7 @@ struct DailyMeal: Identifiable {
 // ショッピングリストアイテム
 struct ShoppingListItem: Identifiable {
     let id = UUID()
-    let ingredient: Ingredient
+    let ingredient: AppIngredient
     let quantity: Double
     let isCompleted: Bool = false
 }
